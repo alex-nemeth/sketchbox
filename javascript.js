@@ -7,18 +7,22 @@ function createBoxes(size) {
 
     for (let i = 0; i < amountOfBoxes; i++) {
         let div = document.createElement("div");
+        div.addEventListener("mouseover", colorOnClick);
         container.insertAdjacentElement("beforeend", div);
     }
 }
 
-//     let amountOfBoxes = size * size;
+function size() {
+    let input = -1;
+    while (input < 0 || input > 100) input = prompt("Size of the sketchbox?");
+    return input;
+}
 
-//     for (let i = 0; i < amountOfBoxes; i++) {
-//         let div = document.createElement("div");
-//         container.insertAdjacentElement("beforeend", div);
-//     }
-// }
+function colorOnClick() {
+    this.style.backgroundColor = color;
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-    createBoxes(16);
-});
+let color = "black";
+
+//MAIN
+createBoxes(size());
