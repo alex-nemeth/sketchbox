@@ -4,7 +4,6 @@ function createBoxes(size) {
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     let amountOfBoxes = size * size;
-
     for (let i = 0; i < amountOfBoxes; i++) {
         let div = document.createElement("div");
         div.addEventListener("mouseover", colorOnClick);
@@ -22,7 +21,11 @@ function colorOnClick() {
     this.style.backgroundColor = color;
 }
 
-let color = "black";
+function resetBoxes() {
+    let boxes = document.querySelectorAll(".container");
+    boxes.style.backgroundColor = "white";
+}
 
 //MAIN
-createBoxes(size());
+let color = "black";
+createBoxes(32);
