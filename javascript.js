@@ -1,10 +1,10 @@
 let color = "black";
+createBoxes(32);
 
 function createBoxes(size) {
     let container = document.querySelector(".container");
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-
     let amountOfBoxes = size * size;
     for (let i = 0; i < amountOfBoxes; i++) {
         let div = document.createElement("div");
@@ -32,11 +32,7 @@ function setColor(colorChoice) {
     color = colorChoice;
 }
 
-function resetBoxes() {
+function reset() {
     let boxes = document.querySelectorAll(".boxes");
-    boxes.style.backgroundColor = "white";
+    boxes.forEach((box) => (box.style.backgroundColor = "white"));
 }
-
-//MAIN
-
-createBoxes(32);
