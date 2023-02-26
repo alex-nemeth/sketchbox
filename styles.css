@@ -41,6 +41,15 @@ button {
     font-size: 8px;
 }
 
+button:hover {
+    background-color: #d9d9d9;
+}
+
+button:active {
+    background-color: #bababa;
+    transform: translateY(4px);
+}
+
 .boxes {
     background-color: white;
 }
