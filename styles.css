@@ -16,6 +16,10 @@ body {
     margin-top: 20px;
 }
 
+.boxes {
+    background-color: white;
+}
+
 .footer {
     display: flex;
     margin-top: 50px;
